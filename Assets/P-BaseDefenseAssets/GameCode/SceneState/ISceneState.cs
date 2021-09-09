@@ -31,7 +31,9 @@ public class ISceneState
 
 	// 更新
 	public virtual void StateUpdate()
-	{}
+	{
+		Debug.Log(m_StateName + " StateUpdate");
+	}
 
 	public override string ToString ()
 	{

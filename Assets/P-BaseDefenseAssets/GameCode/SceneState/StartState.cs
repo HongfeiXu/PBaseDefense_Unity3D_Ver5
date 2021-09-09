@@ -13,12 +13,14 @@ public class StartState : ISceneState
 	// 開始
 	public override void StateBegin()
 	{
+		Debug.Log(this.StateName + " StateBegin");
 		// 可在此進行遊戲資料載入及初始...等
 	}
 
 	// 更新
 	public override void StateUpdate()
 	{
+		Debug.Log(this.StateName + " StateUpdate");
 		// 更換為
 		m_Controller.SetState(new MainMenuState(m_Controller), "MainMenuScene");
 	}

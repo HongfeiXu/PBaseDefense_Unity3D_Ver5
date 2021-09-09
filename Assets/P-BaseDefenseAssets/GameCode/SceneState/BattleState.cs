@@ -13,18 +13,22 @@ public class BattleState : ISceneState
 	// 開始
 	public override void StateBegin()
 	{
+		Debug.Log(this.StateName + " StateBegin");
 		PBaseDefenseGame.Instance.Initinal();
 	}
 
 	// 結束
 	public override void StateEnd()
 	{
+		Debug.Log(this.StateName + " StateEnd");
 		PBaseDefenseGame.Instance.Release();
 	}
 			
 	// 更新
 	public override void StateUpdate()
-	{	
+	{
+		Debug.Log(this.StateName + " StateUpdate");
+
 		// 遊戲邏輯
 		PBaseDefenseGame.Instance.Update();
 		// Render由Unity負責

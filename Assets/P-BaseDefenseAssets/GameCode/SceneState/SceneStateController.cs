@@ -4,8 +4,8 @@ using System.Collections;
 // 場景狀態控制者
 public class SceneStateController
 {
-	private ISceneState m_State;	
-	private bool 	m_bRunBegin = false;
+	private ISceneState m_State;			// 当前的游戏场景状态
+	private bool 	m_bRunBegin = false;	// 是否运行了StateBegin
 	
 	public SceneStateController()
 	{}
@@ -13,7 +13,7 @@ public class SceneStateController
 	// 設定狀態
 	public void SetState(ISceneState State, string LoadSceneName)
 	{
-		//Debug.Log ("SetState:"+State.ToString());
+		Debug.Log("SetState:" + State.ToString());
 		m_bRunBegin = false;
 
 		// 載入場景

@@ -13,6 +13,7 @@ public class MainMenuState : ISceneState
 	// 開始
 	public override void StateBegin()
 	{
+		Debug.Log(this.StateName + " StateBegin");
 		// 取得開始按鈕
 		Button tmpBtn = UITool.GetUIComponent<Button>("StartGameBtn");
 		if(tmpBtn!=null)
